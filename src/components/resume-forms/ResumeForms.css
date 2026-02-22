@@ -1,0 +1,941 @@
+/* ============================================
+   RESUME FORMS — Shared Styles
+   Inherits CSS variables from index.css
+   ============================================ */
+
+.rf-section {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+}
+
+.rf-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.rf-title svg {
+    color: #14b8a6;
+}
+
+.rf-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+@media (max-width: 640px) {
+    .rf-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.rf-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.rf-group.full {
+    grid-column: 1 / -1;
+}
+
+.rf-group label {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.rf-group input,
+.rf-group textarea,
+.rf-group select {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    font-size: 0.92rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--input-bg);
+    color: var(--text-primary);
+    font-family: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.rf-group input:focus,
+.rf-group textarea:focus,
+.rf-group select:focus {
+    outline: none;
+    border-color: #14b8a6;
+    box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.15);
+}
+
+.rf-group textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.rf-icon-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.rf-icon-input svg {
+    position: absolute;
+    left: 12px;
+    color: var(--text-muted);
+    pointer-events: none;
+}
+
+.rf-icon-input input {
+    padding-left: 40px;
+}
+
+.rf-char-count {
+    font-size: 0.73rem;
+    color: var(--text-muted);
+    text-align: right;
+}
+
+/* Buttons */
+.rf-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.65rem 1.1rem;
+    font-size: 0.88rem;
+    font-weight: 500;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+
+.rf-btn.primary {
+    background: #14b8a6;
+    color: white;
+}
+
+.rf-btn.primary:hover {
+    background: #0d9488;
+    transform: translateY(-1px);
+}
+
+.rf-btn.ghost {
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+}
+
+.rf-btn.ghost:hover {
+    background: var(--card-bg-secondary);
+    color: var(--text-primary);
+}
+
+.rf-btn.danger-ghost {
+    background: transparent;
+    color: var(--text-muted);
+    border: none;
+}
+
+.rf-btn.danger-ghost:hover {
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.08);
+}
+
+.rf-btn.add-trigger {
+    width: 100%;
+    padding: 0.85rem;
+    background: transparent;
+    color: #14b8a6;
+    border: 2px dashed var(--border-color);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.rf-btn.add-trigger:hover {
+    border-color: #14b8a6;
+    background: rgba(20, 184, 166, 0.06);
+}
+
+.rf-btn.small {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+}
+
+.rf-icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.rf-icon-btn:hover {
+    background: var(--card-bg-secondary);
+    color: var(--text-primary);
+}
+
+.rf-icon-btn.danger:hover {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+}
+
+/* Cards */
+.rf-card {
+    background: var(--card-bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+    transition: border-color 0.2s;
+}
+
+.rf-card:hover {
+    border-color: #14b8a6;
+}
+
+.rf-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.85rem 1rem;
+}
+
+.rf-card-info h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.rf-card-info p {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    margin: 0.15rem 0 0;
+}
+
+.rf-card-actions {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.rf-card-body {
+    padding: 0 1rem 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.rf-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+/* Skills tags */
+.rf-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.rf-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: default;
+}
+
+.rf-tag.tech {
+    background: rgba(37, 99, 235, 0.1);
+    color: #1d4ed8;
+    border: 1.5px solid rgba(37, 99, 235, 0.3);
+    font-weight: 600;
+}
+
+.rf-tag.tech::before {
+    content: '⚙';
+    font-size: 0.7rem;
+    opacity: 0.8;
+}
+
+.rf-tag.soft {
+    background: rgba(99, 102, 241, 0.12);
+    color: #4f46e5;
+    border: 1.5px solid rgba(99, 102, 241, 0.35);
+    font-weight: 600;
+}
+
+.rf-tag.soft::before {
+    content: '★';
+    font-size: 0.7rem;
+    opacity: 0.8;
+}
+
+.rf-tag button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    color: inherit;
+    opacity: 0.6;
+    font-size: 0.9rem;
+}
+
+.rf-tag button:hover {
+    opacity: 1;
+}
+
+/* Skill input row — stacked layout */
+.rf-skill-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    margin-bottom: 1.1rem;
+}
+
+/* Top row: full-width text input */
+.rf-skill-row input {
+    width: 100%;
+    min-width: 0;
+    padding: 0.72rem 1rem;
+    font-size: 0.9rem;
+    border: 1.5px solid var(--border-color);
+    border-radius: 10px;
+    background: var(--card-bg-secondary, #1e293b);
+    color: var(--text-primary);
+    font-family: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+.rf-skill-row input:focus {
+    outline: none;
+    border-color: #14b8a6;
+    box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.18);
+}
+
+.rf-skill-row input::placeholder {
+    color: var(--text-muted);
+    opacity: 0.65;
+    font-size: 0.84rem;
+}
+
+/* Bottom row: category select + add button */
+.rf-skill-row-bottom {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.rf-skill-row select {
+    flex: 1;
+    min-width: 0;
+    padding: 0.62rem 0.9rem;
+    font-size: 0.85rem;
+    border: 1.5px solid var(--border-color);
+    border-radius: 10px;
+    background: var(--card-bg-secondary, #1e293b);
+    color: var(--text-primary);
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    appearance: auto;
+}
+
+.rf-skill-row select:focus {
+    outline: none;
+    border-color: #14b8a6;
+    box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.15);
+}
+
+/* Bullets */
+.rf-bullet-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rf-bullet-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.rf-bullet-item span {
+    font-size: 0.88rem;
+    color: var(--text-primary);
+    flex: 1;
+    padding: 0.35rem 0;
+}
+
+.rf-bullet-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #14b8a6;
+    flex-shrink: 0;
+    margin-top: 0.6rem;
+}
+
+.rf-add-bullet {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+    align-items: flex-end;
+    /* button sits beside AI Assist, at bottom */
+}
+
+.rf-add-bullet input {
+    flex: 1;
+}
+
+/* "+ Add" pill — matches ai-trigger-btn shape exactly */
+.rf-bullet-add-btn {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 5px 12px;
+    border-radius: 6px;
+    border: none;
+    background: linear-gradient(135deg, #14b8a6, #0d9488);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+    opacity: 0.9;
+    white-space: nowrap;
+}
+
+.rf-bullet-add-btn:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(20, 184, 166, 0.3);
+}
+
+/* Empty state */
+.rf-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.rf-empty svg {
+    margin-bottom: 0.75rem;
+    opacity: 0.4;
+}
+
+.rf-empty p {
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin: 0 0 0.2rem;
+}
+
+.rf-empty span {
+    font-size: 0.8rem;
+}
+
+/* Tip bubble */
+.rf-tip {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: rgba(20, 184, 166, 0.07);
+    border-left: 3px solid #14b8a6;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.rf-tip svg {
+    color: #14b8a6;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+/* Category section label */
+.rf-cat-label {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 1rem 0 0.5rem;
+}
+
+/* Checkbox style */
+.rf-checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    margin-top: 0.25rem;
+}
+
+.rf-checkbox-row input[type='checkbox'] {
+    width: 16px;
+    height: 16px;
+    accent-color: #14b8a6;
+    flex-shrink: 0;
+}
+
+/* ── Work Experience list container ── */
+.re-exp-list {
+    border: 1.5px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+/* Individual accordion entry */
+.re-exp-entry {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.re-exp-entry:last-child {
+    border-bottom: none;
+}
+
+.re-exp-entry.open {
+    background: var(--card-bg-secondary);
+}
+
+/* Clickable header row */
+.re-exp-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.85rem 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.15s;
+    font-family: inherit;
+}
+
+.re-exp-header:hover {
+    background: var(--card-bg-secondary);
+}
+
+/* Numbered badge */
+.re-exp-num {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #2563eb;
+    color: white;
+    font-size: 0.72rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Title + meta */
+.re-exp-summary {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.3rem 0.75rem;
+    min-width: 0;
+}
+
+.re-exp-title {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.re-exp-company,
+.re-exp-date {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* Actions (delete + chevron) */
+.re-exp-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    flex-shrink: 0;
+    color: var(--text-muted);
+}
+
+/* Expanded edit body */
+.re-exp-body {
+    padding: 1rem 1rem 1rem 1.25rem;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Inline add form at bottom of list */
+.re-exp-add-form {
+    padding: 1rem;
+    border-top: 1.5px dashed #2563eb;
+    background: rgba(37, 99, 235, 0.03);
+}
+
+.re-exp-add-title {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #2563eb;
+    margin: 0 0 1rem;
+}
+
+/* Bullet editor wrapper */
+.rf-bullet-editor {
+    margin-top: 0.25rem;
+}
+
+/* Shared label + hint utility */
+.rf-label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 0.4rem;
+}
+
+.rf-hint {
+    font-size: 0.73rem;
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+}
+
+/* ── Experience form field layouts ── */
+
+/* Main stack — full width, single column */
+.re-exp-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+/* Job Title + Company: two equal columns */
+.re-exp-field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+}
+
+/* Start + End Date: single column — each gets full width in the narrow sidebar */
+.re-exp-date-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+
+/* All inputs inside rf-group get full visibility */
+.re-exp-fields .rf-group input,
+.re-exp-fields .rf-group select {
+    width: 100%;
+    padding: 0.65rem 0.8rem;
+    font-size: 0.88rem;
+    border: 1.5px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--input-bg);
+    color: var(--text-primary);
+    font-family: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+.re-exp-fields .rf-group input:focus,
+.re-exp-fields .rf-group select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.re-exp-fields .rf-group input::placeholder {
+    color: var(--text-muted);
+    opacity: 0.65;
+    font-size: 0.82rem;
+}
+
+.re-exp-fields .rf-group label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 0.3rem;
+}
+
+/* ═══════════════════════════════════════════
+   ADD EXPERIENCE WIZARD
+   ═══════════════════════════════════════════ */
+
+.re-wizard {
+    background: var(--card-bg);
+    border: 1.5px solid rgba(20, 184, 166, 0.35);
+    border-radius: 14px;
+    overflow: hidden;
+    margin-top: 0.75rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* ── Stepper row ── */
+.re-wizard-steps {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1rem 0;
+    gap: 0;
+}
+
+.re-wizard-step {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.re-wizard-step-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.re-wizard-step-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--border-color);
+    background: var(--card-bg-secondary);
+    color: var(--text-muted);
+    transition: all 0.25s ease;
+    font-size: 0.8rem;
+}
+
+.re-wizard-step.active .re-wizard-step-icon {
+    border-color: #14b8a6;
+    background: rgba(20, 184, 166, 0.12);
+    color: #14b8a6;
+    box-shadow: 0 0 0 4px rgba(20, 184, 166, 0.15);
+}
+
+.re-wizard-step.done .re-wizard-step-icon {
+    border-color: #10b981;
+    background: #10b981;
+    color: white;
+}
+
+.re-wizard-step-label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    transition: color 0.2s;
+}
+
+.re-wizard-step.active .re-wizard-step-label {
+    color: #14b8a6;
+}
+
+.re-wizard-step.done .re-wizard-step-label {
+    color: #10b981;
+}
+
+/* Connector line between steps */
+.re-wizard-connector {
+    flex: 1;
+    height: 2px;
+    background: var(--border-color);
+    margin: 0 4px;
+    margin-bottom: 18px;
+    /* align with icon center */
+    border-radius: 2px;
+    transition: background 0.3s;
+}
+
+.re-wizard-connector.done {
+    background: #10b981;
+}
+
+/* ── Progress bar ── */
+.re-wizard-bar {
+    height: 3px;
+    background: var(--border-color);
+    margin: 0.75rem 1rem 0;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.re-wizard-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #14b8a6, #6366f1);
+    border-radius: 3px;
+    transition: width 0.4s ease;
+}
+
+/* ── Step body ── */
+.re-wizard-body {
+    padding: 1rem;
+}
+
+.re-wizard-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+    color: #14b8a6;
+}
+
+.re-wizard-heading h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 0.15rem;
+}
+
+.re-wizard-heading p {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Mini role preview chip */
+.re-wizard-preview {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(20, 184, 166, 0.08);
+    border: 1px solid rgba(20, 184, 166, 0.25);
+    border-radius: 8px;
+    padding: 0.45rem 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #14b8a6;
+    flex-wrap: wrap;
+}
+
+.re-wizard-preview-sep {
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+/* ── Footer nav ── */
+.re-wizard-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.25rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-color);
+    gap: 0.5rem;
+}
+
+/* Next button */
+.re-wizard-next-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1.1rem;
+    background: #14b8a6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s;
+    margin-left: auto;
+}
+
+.re-wizard-next-btn:hover:not(:disabled) {
+    background: #0d9488;
+    transform: translateX(2px);
+}
+
+.re-wizard-next-btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Submit button */
+.re-wizard-submit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.65rem 1.25rem;
+    background: linear-gradient(135deg, #14b8a6, #6366f1);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s;
+    margin-left: auto;
+    box-shadow: 0 4px 14px rgba(20, 184, 166, 0.35);
+}
+
+.re-wizard-submit-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(20, 184, 166, 0.45);
+}

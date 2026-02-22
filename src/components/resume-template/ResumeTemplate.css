@@ -1,0 +1,874 @@
+/* ================================================
+   RESUME TEMPLATES — All 6 variants
+   ================================================ */
+
+/* ---- Shared base reset ---- */
+.rt-wrap {
+    width: 100%;
+    min-height: auto;
+    background: white;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    font-size: 11px;
+    line-height: 1.55;
+    color: #1a1a1a;
+    box-sizing: border-box;
+}
+
+
+/* ── Shared skill chip styles (used across all templates) ── */
+.rt-chip.tech {
+    background: rgba(37, 99, 235, 0.1);
+    color: #1d4ed8;
+    border: 1px solid rgba(37, 99, 235, 0.25);
+}
+
+.rt-chip.soft {
+    background: rgba(99, 102, 241, 0.1);
+    color: #4f46e5;
+    border: 1px solid rgba(99, 102, 241, 0.25);
+}
+
+/* Shared chip base (when a template only defines .rt-chip without the variant) */
+.rt-chip {
+    display: inline-block;
+    padding: 0.18rem 0.55rem;
+    border-radius: 4px;
+    font-size: 0.71rem;
+    font-weight: 500;
+    margin: 0.1rem 0.1rem 0 0;
+}
+
+/* Category sub-label inside skills section */
+.rt-skill-cat-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #94a3b8;
+    margin: 0.45rem 0 0.25rem;
+}
+
+
+
+
+/* ============================================
+   1. CHRONOLOGICAL — Classic two-column header
+   ============================================ */
+.rt-chrono {
+    padding: 2rem 2.2rem;
+}
+
+.rt-chrono .rt-header {
+    border-bottom: 2.5px solid #1e293b;
+    padding-bottom: 0.9rem;
+    margin-bottom: 1.1rem;
+    text-align: center;
+}
+
+.rt-chrono .rt-name {
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: #0f172a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 0.3rem;
+}
+
+.rt-chrono .rt-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem 1rem;
+    font-size: 0.78rem;
+    color: #475569;
+}
+
+.rt-chrono .rt-contact span+span::before {
+    content: '•';
+    margin-right: 1rem;
+    color: #94a3b8;
+}
+
+.rt-chrono .rt-section-title {
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #1e293b;
+    border-bottom: 1.5px solid #1e293b;
+    padding-bottom: 0.2rem;
+    margin: 1rem 0 0.6rem;
+}
+
+.rt-chrono .rt-summary-text {
+    font-size: 0.8rem;
+    color: #374151;
+    line-height: 1.65;
+}
+
+.rt-chrono .rt-entry {
+    margin-bottom: 0.8rem;
+}
+
+.rt-chrono .rt-entry-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.rt-chrono .rt-entry-title {
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.rt-chrono .rt-entry-sub {
+    font-size: 0.76rem;
+    color: #64748b;
+    font-style: italic;
+}
+
+.rt-chrono .rt-entry-date {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    white-space: nowrap;
+}
+
+.rt-chrono .rt-bullets {
+    margin: 0.35rem 0 0 1rem;
+    padding: 0;
+    list-style: disc;
+}
+
+.rt-chrono .rt-bullets li {
+    font-size: 0.76rem;
+    color: #374151;
+    margin-bottom: 0.15rem;
+    line-height: 1.5;
+}
+
+.rt-chrono .rt-skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+}
+
+.rt-chrono .rt-skill-chip {
+    padding: 0.18rem 0.6rem;
+    background: #f1f5f9;
+    border-radius: 4px;
+    font-size: 0.73rem;
+    color: #334155;
+}
+
+/* ============================================
+   2. FUNCTIONAL — Skills-first, teal accent
+   ============================================ */
+.rt-functional {
+    padding: 2rem 2.2rem;
+}
+
+.rt-functional .rt-header {
+    background: #0f766e;
+    margin: -2rem -2.2rem 1.2rem;
+    padding: 1.5rem 2.2rem;
+    color: white;
+}
+
+.rt-functional .rt-name {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin: 0 0 0.3rem;
+}
+
+.rt-functional .rt-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem 1.2rem;
+    font-size: 0.76rem;
+    opacity: 0.9;
+}
+
+.rt-functional .rt-section-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    color: #0f766e;
+    margin: 1rem 0 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.rt-functional .rt-section-title::after {
+    content: '';
+    flex: 1;
+    height: 1.5px;
+    background: #ccfbf1;
+}
+
+.rt-functional .rt-summary-text {
+    font-size: 0.8rem;
+    color: #374151;
+    line-height: 1.65;
+}
+
+.rt-functional .rt-skill-cat-title {
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: #0f766e;
+    margin: 0.6rem 0 0.3rem;
+}
+
+.rt-functional .rt-skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.rt-functional .rt-chip {
+    padding: 0.2rem 0.65rem;
+    border-radius: 50px;
+    font-size: 0.72rem;
+    font-weight: 500;
+}
+
+.rt-functional .rt-chip.tech {
+    background: #ccfbf1;
+    color: #0f766e;
+}
+
+.rt-functional .rt-chip.soft {
+    background: #f0fdf4;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+.rt-functional .rt-entry {
+    margin-bottom: 0.7rem;
+}
+
+.rt-functional .rt-entry-title {
+    font-size: 0.83rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.rt-functional .rt-entry-sub {
+    font-size: 0.75rem;
+    color: #64748b;
+    font-style: italic;
+}
+
+.rt-functional .rt-bullets {
+    margin: 0.3rem 0 0 1rem;
+    padding: 0;
+    list-style: disc;
+    font-size: 0.76rem;
+    color: #374151;
+}
+
+.rt-functional .rt-bullets li {
+    margin-bottom: 0.15rem;
+}
+
+/* ============================================
+   3. COMBINATION — Blue accent, two-col lower
+   ============================================ */
+.rt-combo {
+    padding: 2rem 2.2rem;
+}
+
+.rt-combo .rt-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 3px solid #3b82f6;
+    padding-bottom: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.rt-combo .rt-name {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #1e3a5f;
+    margin: 0;
+}
+
+.rt-combo .rt-contact {
+    text-align: right;
+    font-size: 0.75rem;
+    color: #475569;
+    line-height: 1.8;
+}
+
+.rt-combo .rt-section-title {
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #3b82f6;
+    margin: 1rem 0 0.55rem;
+    padding-left: 0.6rem;
+    border-left: 3px solid #3b82f6;
+}
+
+.rt-combo .rt-summary-text {
+    font-size: 0.8rem;
+    color: #374151;
+    line-height: 1.65;
+}
+
+.rt-combo .rt-skill-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.3rem;
+}
+
+.rt-combo .rt-skill-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.76rem;
+    color: #334155;
+}
+
+.rt-combo .rt-skill-item::before {
+    content: '▸';
+    color: #3b82f6;
+    font-size: 0.7rem;
+}
+
+.rt-combo .rt-entry {
+    margin-bottom: 0.75rem;
+}
+
+.rt-combo .rt-entry-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.rt-combo .rt-entry-title {
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.rt-combo .rt-entry-sub {
+    font-size: 0.75rem;
+    color: #64748b;
+    font-style: italic;
+}
+
+.rt-combo .rt-entry-date {
+    font-size: 0.71rem;
+    color: #94a3b8;
+    white-space: nowrap;
+}
+
+.rt-combo .rt-bullets {
+    margin: 0.3rem 0 0 1rem;
+    padding: 0;
+    list-style: disc;
+    font-size: 0.76rem;
+    color: #374151;
+}
+
+.rt-combo .rt-bullets li {
+    margin-bottom: 0.15rem;
+}
+
+/* ============================================
+   4. STUDENT — Purple accent, education-first
+   ============================================ */
+.rt-student {
+    padding: 2rem 2.2rem;
+}
+
+.rt-student .rt-header {
+    text-align: center;
+    margin-bottom: 1.1rem;
+}
+
+.rt-student .rt-name {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: #4c1d95;
+    margin: 0 0 0.3rem;
+}
+
+.rt-student .rt-tagline {
+    font-size: 0.85rem;
+    color: #7c3aed;
+    font-style: italic;
+    margin: 0 0 0.4rem;
+}
+
+.rt-student .rt-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.2rem 0.8rem;
+    font-size: 0.75rem;
+    color: #475569;
+}
+
+.rt-student .rt-divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #7c3aed, transparent);
+    margin: 0.8rem 0 1rem;
+}
+
+.rt-student .rt-section-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    color: #7c3aed;
+    margin: 0.9rem 0 0.55rem;
+}
+
+.rt-student .rt-section-title::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background: #e9d5ff;
+    margin-top: 0.2rem;
+}
+
+.rt-student .rt-objective {
+    font-size: 0.8rem;
+    color: #374151;
+    line-height: 1.65;
+    padding: 0.65rem 0.9rem;
+    background: #faf5ff;
+    border-left: 3px solid #7c3aed;
+    border-radius: 0 6px 6px 0;
+}
+
+.rt-student .rt-skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+}
+
+.rt-student .rt-chip {
+    padding: 0.2rem 0.65rem;
+    border-radius: 50px;
+    font-size: 0.72rem;
+    font-weight: 500;
+}
+
+.rt-student .rt-chip.tech {
+    background: #ede9fe;
+    color: #5b21b6;
+}
+
+.rt-student .rt-chip.soft {
+    background: #fce7f3;
+    color: #9d174d;
+}
+
+.rt-student .rt-entry {
+    margin-bottom: 0.75rem;
+}
+
+.rt-student .rt-entry-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.rt-student .rt-entry-title {
+    font-size: 0.83rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.rt-student .rt-entry-sub {
+    font-size: 0.74rem;
+    color: #64748b;
+    font-style: italic;
+}
+
+.rt-student .rt-entry-date {
+    font-size: 0.71rem;
+    color: #94a3b8;
+    white-space: nowrap;
+}
+
+.rt-student .rt-bullets {
+    margin: 0.3rem 0 0 1rem;
+    padding: 0;
+    list-style: disc;
+    font-size: 0.75rem;
+    color: #374151;
+}
+
+.rt-student .rt-bullets li {
+    margin-bottom: 0.15rem;
+}
+
+/* ============================================
+   5. CREATIVE — Sidebar layout, pink/orange
+   ============================================ */
+.rt-creative {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    min-height: 100%;
+}
+
+.rt-creative .rt-sidebar {
+    background: linear-gradient(180deg, #1e1b4b 0%, #312e81 100%);
+    padding: 1.8rem 1.2rem;
+    color: white;
+}
+
+.rt-creative .rt-name {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: white;
+    line-height: 1.2;
+    margin: 0 0 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.rt-creative .rt-role {
+    font-size: 0.72rem;
+    color: #a5b4fc;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 1.2rem;
+}
+
+.rt-creative .rt-sidebar-section-title {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #818cf8;
+    margin: 1rem 0 0.5rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.rt-creative .rt-contact-item {
+    font-size: 0.72rem;
+    color: #c7d2fe;
+    margin-bottom: 0.35rem;
+    word-break: break-all;
+}
+
+.rt-creative .rt-chip {
+    display: inline-block;
+    padding: 0.2rem 0.55rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    font-size: 0.68rem;
+    color: #e0e7ff;
+    margin: 0.15rem 0.15rem 0 0;
+}
+
+.rt-creative .rt-chip.soft {
+    background: rgba(167, 139, 250, 0.2);
+    color: #c4b5fd;
+}
+
+.rt-creative .rt-main {
+    padding: 1.8rem 1.5rem;
+    background: white;
+}
+
+.rt-creative .rt-section-title {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #4f46e5;
+    margin: 0.9rem 0 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.rt-creative .rt-section-title::before {
+    content: '';
+    width: 3px;
+    height: 12px;
+    background: linear-gradient(180deg, #818cf8, #4f46e5);
+    border-radius: 2px;
+}
+
+.rt-creative .rt-summary-text {
+    font-size: 0.78rem;
+    color: #374151;
+    line-height: 1.65;
+}
+
+.rt-creative .rt-entry {
+    margin-bottom: 0.75rem;
+}
+
+.rt-creative .rt-entry-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.rt-creative .rt-entry-title {
+    font-size: 0.83rem;
+    font-weight: 700;
+    color: #1e1b4b;
+}
+
+.rt-creative .rt-entry-sub {
+    font-size: 0.74rem;
+    color: #64748b;
+    font-style: italic;
+}
+
+.rt-creative .rt-entry-date {
+    font-size: 0.71rem;
+    color: #94a3b8;
+    white-space: nowrap;
+}
+
+.rt-creative .rt-bullets {
+    margin: 0.3rem 0 0 1rem;
+    padding: 0;
+    list-style: disc;
+    font-size: 0.75rem;
+    color: #374151;
+}
+
+.rt-creative .rt-bullets li {
+    margin-bottom: 0.15rem;
+}
+
+/* ============================================
+   6. TECHNICAL — Dark header, code-style
+   ============================================ */
+.rt-technical {
+    padding: 0;
+}
+
+.rt-technical .rt-header {
+    background: #0f172a;
+    padding: 1.5rem 2rem;
+    color: white;
+}
+
+.rt-technical .rt-name {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: white;
+    font-family: 'Fira Code', 'Consolas', monospace;
+    margin: 0 0 0.3rem;
+}
+
+.rt-technical .rt-name-prefix {
+    color: #22d3ee;
+    font-size: 1rem;
+    font-family: 'Fira Code', 'Consolas', monospace;
+}
+
+.rt-technical .rt-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem 1.2rem;
+    font-size: 0.74rem;
+    color: #94a3b8;
+    margin-top: 0.4rem;
+}
+
+.rt-technical .rt-contact span {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.rt-technical .rt-body {
+    padding: 1.2rem 2rem;
+}
+
+.rt-technical .rt-section-title {
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #22d3ee;
+    margin: 0.9rem 0 0.5rem;
+    font-family: 'Fira Code', 'Consolas', monospace;
+}
+
+.rt-technical .rt-section-title::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background: linear-gradient(90deg, #22d3ee40, transparent);
+    margin-top: 0.25rem;
+}
+
+.rt-technical .rt-summary-text {
+    font-size: 0.78rem;
+    color: #374151;
+    line-height: 1.65;
+}
+
+.rt-technical .rt-tech-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.3rem;
+}
+
+.rt-technical .rt-tech-chip {
+    padding: 0.25rem 0.55rem;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 4px;
+    font-size: 0.71rem;
+    color: #065f46;
+    font-family: 'Fira Code', 'Consolas', monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.rt-technical .rt-soft-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    margin-top: 0.4rem;
+}
+
+.rt-technical .rt-soft-chip {
+    padding: 0.18rem 0.5rem;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    color: #475569;
+}
+
+.rt-technical .rt-entry {
+    margin-bottom: 0.8rem;
+}
+
+.rt-technical .rt-entry-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.rt-technical .rt-entry-title {
+    font-size: 0.83rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.rt-technical .rt-entry-sub {
+    font-size: 0.74rem;
+    color: #0f766e;
+    font-style: italic;
+}
+
+.rt-technical .rt-entry-date {
+    font-size: 0.71rem;
+    color: #94a3b8;
+    white-space: nowrap;
+}
+
+.rt-technical .rt-bullets {
+    margin: 0.35rem 0 0 1rem;
+    padding: 0;
+    list-style: none;
+}
+
+.rt-technical .rt-bullets li {
+    font-size: 0.76rem;
+    color: #374151;
+    margin-bottom: 0.15rem;
+    padding-left: 0.8rem;
+    position: relative;
+}
+
+.rt-technical .rt-bullets li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #22d3ee;
+    font-size: 0.65rem;
+}
+
+.rt-technical .rt-project-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.rt-technical .rt-project-tools {
+    font-size: 0.7rem;
+    color: #22d3ee;
+    font-family: 'Fira Code', 'Consolas', monospace;
+    font-style: italic;
+}
+
+.rt-technical .rt-project-desc {
+    font-size: 0.75rem;
+    color: #374151;
+    margin: 0.2rem 0 0;
+    line-height: 1.5;
+}
+
+/* Placeholder */
+.rt-placeholder {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
+
+/* Print */
+@media print {
+
+    .rt-wrap,
+    .rt-creative,
+    .rt-technical {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+
+/* ── Summary below header (introduction block) ── */
+.rt-summary-intro {
+    margin: 0 0 1rem;
+    font-size: 0.79rem;
+    line-height: 1.7;
+    color: #374151;
+    font-style: italic;
+}
+
+/* Functional — sits just below the teal header */
+.rt-functional-intro {
+    font-style: normal;
+    border-left: 3px solid #0f766e;
+    padding-left: 0.75rem;
+    color: #1e293b;
+    margin-bottom: 1.1rem;
+}
+
+/* Student — purple highlight block */
+.rt-student-intro {
+    font-style: normal;
+    color: #5b21b6;
+    background: #faf5ff;
+    border-left: 3px solid #7c3aed;
+    border-radius: 0 6px 6px 0;
+    padding: 0.45rem 0.8rem;
+    margin-bottom: 1rem;
+}
