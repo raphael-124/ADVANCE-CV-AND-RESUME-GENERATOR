@@ -1,10 +1,8 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FileText, Zap, Download, Palette, Shield, Sparkles, Home, ArrowLeft, CheckCircle } from 'lucide-react';
+import { FileText, Zap, Download, Palette, Shield, CheckCircle, ArrowLeft } from 'lucide-react';
 import './LandingPage.css';
 
 export default function LandingPage() {
-    const [hasExistingData, setHasExistingData] = useState(() => !!localStorage.getItem('cvData'));
 
     const features = [
         { icon: <Palette size={24} />, title: 'Smart Color Themes', desc: 'Industry-specific palettes that match your profession' },
@@ -52,17 +50,8 @@ export default function LandingPage() {
                     <div className="hero-actions">
                         <Link to="/editor" className="btn-primary">
                             <FileText size={20} />
-                            {hasExistingData ? 'Continue Editing' : 'Create Your CV'}
+                            Start Writing Your CV
                         </Link>
-
-                        {hasExistingData && (
-                            <Link to="/editor" className="btn-secondary" onClick={() => {
-                                localStorage.removeItem('cvData');
-                                setHasExistingData(false);
-                            }}>
-                                Start Fresh
-                            </Link>
-                        )}
                     </div>
 
                     <div className="hero-stats">
