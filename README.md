@@ -1,23 +1,23 @@
-# 🎓 Advanced CV & Resume Generator
+# Advanced CV & Resume Generator
 
 > A modern, feature-rich web application for building professional CVs and Resumes — with live preview, multiple templates, AI assistance, and PDF export.
 
 ---
 
-## ✨ Features
+## Features
 
-- 📄 **Multiple CV Templates** — Choose from 15+ professionally designed templates (Classic, Modern, Bold, Elegant, Tech, Academic, Medical, Infographic, Europass, and more)
-- 📝 **Resume Builder** — Dedicated resume builder with its own set of templates and form sections
-- 🤖 **AI Assistant** — Built-in AI-powered text suggestions to help write better CV content
-- 🎨 **Color Themes** — Customize your CV with a variety of color palettes
-- 👁️ **Live Preview** — See your changes reflected in real time as you type
-- 📤 **Export Options** — Export your CV/Resume as a **PDF** or **DOCX** file
-- 🔄 **Reset / Start Fresh** — Quickly clear all data and start a new CV
-- 💳 **Payment Modal** — Premium features gating with a payment flow
+- **Multiple CV Templates** — Choose from 15+ professionally designed templates (Classic, Modern, Bold, Elegant, Tech, Academic, Medical, Infographic, Europass, and more)
+- **Resume Builder** — Dedicated resume builder with its own set of templates and form sections
+- **AI Assistant** — Built-in AI-powered text suggestions to help write better CV content
+- **Color Themes** — Customize your CV with a variety of color palettes
+- **Live Preview** — See your changes reflected in real time as you type
+- **Export Options** — Export your CV/Resume as a **PDF** or **DOCX** file
+- **Reset / Start Fresh** — Quickly clear all data and start a new CV
+- **payment Modal** — Premium features gating with a payment flow
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Technology | Purpose |
 |------------|---------|
@@ -30,7 +30,7 @@
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -60,7 +60,7 @@ src/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - [Node.js](https://nodejs.org/) (v18 or higher)
@@ -86,30 +86,30 @@ Then open your browser and go to: `http://localhost:5173`
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 > *(Coming soon — add screenshots of the Landing Page, CV Editor, and exported PDF here)*
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions, issues and feature requests are welcome!  
 Feel free to open an [issue](https://github.com/raphael-124/ADVANCE-CV-AND-RESUME-GENERATOR/issues) or submit a pull request.
 
 ---
 
-## 📄 License
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-## 👤 Author
+## Author
 
 **raphael-124**  
 GitHub: [@raphael-124](https://github.com/raphael-124)
 
 ---
 
-⭐ **If you find this project useful, please give it a star!** ⭐
+**If you find this project useful, please give it a star!** 
