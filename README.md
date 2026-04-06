@@ -2,7 +2,7 @@
 
 > A modern, feature-rich web application for building professional CVs and Resumes — with live preview, multiple templates, AI assistance, and PDF export.
 
----
+
 
 ## Features
 
@@ -15,7 +15,7 @@
 - **Reset / Start Fresh** — Quickly clear all data and start a new CV
 - **payment Modal** — Premium features gating with a payment flow
 
----
+
 
 ## Tech Stack
 
@@ -28,7 +28,7 @@
 | **html2pdf / print** | PDF Export |
 | **docx** | DOCX Export |
 
----
+
 
 ## Project Structure
 
@@ -58,7 +58,7 @@ src/
     └── tips.js          # CV writing tips
 ```
 
----
+
 
 ## Getting Started
 
@@ -84,32 +84,27 @@ npm run dev
 
 Then open your browser and go to: `http://localhost:5173`
 
----
+
 
 ## Screenshots
 
 > *(Coming soon — add screenshots of the Landing Page, CV Editor, and exported PDF here)*
 
----
+
 
 ## Contributing
 
 Contributions, issues and feature requests are welcome!  
 Feel free to open an [issue](https://github.com/raphael-124/ADVANCE-CV-AND-RESUME-GENERATOR/issues) or submit a pull request.
 
----
 
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
 
----
+
 
 ## Author
 
 **raphael-124**  
 GitHub: [@raphael-124](https://github.com/raphael-124)
-
----
-
-**If you find this project useful, please give it a star!** 
